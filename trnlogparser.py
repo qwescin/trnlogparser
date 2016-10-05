@@ -20,7 +20,8 @@ def search_in_file():                       # поиск номера телеф
     block =''
     flag = True
     count = 0
-    with open(str(file_path.get()), 'r') as f:
+    text.delete('1.0', END)
+    with open(str(file_path.get()), 'r', encoding="utf8") as f:
         for string in f:
             block += string
             if string.startswith('\n'):
@@ -31,8 +32,6 @@ def search_in_file():                       # поиск номера телеф
                 continue
 
     print(count)
-
-
 
 
 root = Tk()
